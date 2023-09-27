@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { quiz } = require('./questions');
 const app = express();
+app.use(express.static('public')); // wenn Ihre CSS-Datei im `public`-Ordner liegt
 const path = require('path');
 
 // Body Parser Middleware
