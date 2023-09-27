@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizspiel</title>
-    
+    <!-- Hier global css importieren-->
 </head>
 <body>
+    <!-- Mach das zu einer box die in der mitte des bildschirms  flexbox max witdh 800-->
+    <div>
     <% if (!quizStarted) { %>
         <h1>Willkommen beim Quizspiel!</h1>
         <a href="/startQuiz">Quiz starten</a>
@@ -16,16 +18,18 @@
         <form action="/submitAnswer" method="post">
             <% question.antworten.forEach((answer, index) => { %>
 
+                <!-- Diese Div zu einem grid machen kleiner tipp grid col col-2 -->
                 <div>
                     <input type="radio" name="answer" value="<%= index %>" required>
                     <label><%= answer.text %></label>
                 </div>
-                
+
             <% }); %>
             <input type="submit" value="Antwort einreichen">
         </form>
 
         <p>Aktuelle Punktzahl: <%= score %></p>
     <% } %>
+</div>
 </body>
 </html>
