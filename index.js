@@ -1,4 +1,4 @@
-let aktuelleFrageIndex = 0;
+let gestellteFragen = 0;
 let gesamtpunkte = 0;
 let fragen = [];
 
@@ -7,6 +7,7 @@ window.onload = function() {
     .then(response => response.json())
     .then(data => {
         fragen = data;
+        startQuiz(); // Starten Sie das Quiz nachdem die Fragen geladen wurden
     })
     .catch(error => console.error('Fehler:', error));
 };
@@ -26,10 +27,13 @@ function renderAntworten(antworten) {
 }
 
 function naechsteFrage() {
-    if (aktuelleFrageIndex < fragen.length) {
-        let frage = fragen[aktuelleFrageIndex];
+    if (gestellteFragen < 10 && fragen.length > 0) {
+        let zufallIndex = Math.floor(Math.random() * fragen.length);
+        let frage = fragen[zufallIndex];
         document.getElementById('frageTitel').innerText = frage.titel;
         renderAntworten(frage.antworten);
+        fragen.splice(zufallIndex, 1); // Frage aus dem Array entfernen
+        gestellteFragen++;
     } else {
         document.getElementById('quizFragen').style.display = 'none';
         document.getElementById('ergebnis').style.display = 'block';
@@ -38,7 +42,8 @@ function naechsteFrage() {
 }
 
 function antwortAusgewaehlt(index) {
-    let antwort = fragen[aktuelleFrageIndex].antworten[index];
+    let aktuelleFrage = fragen[gestellteFragen - 1]; // Letzte Frage holen
+    let antwort = aktuelleFrage.antworten[index];
     if (antwort.istRichtig) {
         gesamtpunkte += 1;
         document.getElementById('feedback').innerText = "Richtig!";
@@ -47,22 +52,22 @@ function antwortAusgewaehlt(index) {
         document.getElementById('feedback').innerText = "Falsch!";
         document.getElementById('feedback').style.color = 'red';
     }
-    aktuelleFrageIndex += 1;
+
     setTimeout(() => {
-        document.getElementById('feedback').innerText = ""; // Diesen Feedback-Text zurücksetzen
-        if (aktuelleFrageIndex < fragen.length) {
-            naechsteFrage();
-        } else {
-            document.getElementById('quizFragen').style.display = 'none';
-            document.getElementById('ergebnis').style.display = 'block';
-            document.getElementById('punkte').innerText = gesamtpunkte;
-        }
+        document.getElementById('feedback').innerText = ""; // Feedback-Text zurücksetzen
+        naechsteFrage();
     }, 1000);
 }
 
-
 function neustart() {
-    aktuelleFrageIndex = 0;
+    gestellteFragen = 0;
     gesamtpunkte = 0;
-    startQuiz();
+    // Fragenliste erneut laden
+    fetch('questions.json')
+    .then(response => response.json())
+    .then(data => {
+        fragen = data;
+        startQuiz();
+    })
+    .catch(error => console.error('Fehler:', error));
 }
