@@ -16,7 +16,8 @@
     <% } else { %>
         <h2><%= question.titel %></h2>
 
-        <form class="quiz-grid" action="/submitAnswer" method="post">
+        <form action="/submitAnswer" method="post">
+            <div class="quiz-grid">
             <% question.antworten.forEach((answer, index) => { %>
 
                 <!-- Diese Div zu einem grid machen kleiner tipp grid col col-2 -->
@@ -26,7 +27,8 @@
                 </div>
 
             <% }); %>
-            <input type="submit" value="Antwort einreichen">
+        </div>
+            <input class="send" type="submit" value="Antwort einreichen">
         </form>
 
         <p>Aktuelle Punktzahl: <%= score %></p>
