@@ -51,9 +51,17 @@ button:hover {
 }
 
 .center{
-    max-width: 800px; 
+    max-width: 300px; 
+    height: 400px;
     width: 100%; 
-    background-color: #592b2b;
+    background-color: #cbcbcb;
     padding: 20px; 
     border-radius: 8px;
+}
+
+.quiz-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; /* Abstand zwischen den Elementen */
+    background-color: #333;
 }
