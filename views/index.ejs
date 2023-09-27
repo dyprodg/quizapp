@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizspiel</title>
+    
 </head>
 <body>
     <% if (!quizStarted) { %>
@@ -11,15 +12,19 @@
         <a href="/startQuiz">Quiz starten</a>
     <% } else { %>
         <h2><%= question.titel %></h2>
+
         <form action="/submitAnswer" method="post">
             <% question.antworten.forEach((answer, index) => { %>
+
                 <div>
                     <input type="radio" name="answer" value="<%= index %>" required>
                     <label><%= answer.text %></label>
                 </div>
+                
             <% }); %>
             <input type="submit" value="Antwort einreichen">
         </form>
+
         <p>Aktuelle Punktzahl: <%= score %></p>
     <% } %>
 </body>
