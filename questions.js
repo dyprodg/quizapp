@@ -1,4 +1,4 @@
-[
+const quiz = [
     {
         "titel": "Was ist die Hauptstadt von Frankreich?",
         "antworten": [
@@ -900,3 +900,5 @@
         ]
     }
 ]
+
+module.exports = { quiz };
