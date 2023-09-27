@@ -1,13 +1,13 @@
 let gestellteFragen = 0;
 let gesamtpunkte = 0;
 let fragen = [];
+let aktuelleFrageIndex = 0;
 
 window.onload = function() {
     fetch('questions.json')
     .then(response => response.json())
     .then(data => {
         fragen = data;
-        startQuiz(); // Starten Sie das Quiz nachdem die Fragen geladen wurden
     })
     .catch(error => console.error('Fehler:', error));
 };
@@ -27,29 +27,38 @@ function renderAntworten(antworten) {
 }
 
 function naechsteFrage() {
-    if (gestellteFragen < 10 && fragen.length > 0) {
-        let zufallIndex = Math.floor(Math.random() * fragen.length);
-        let frage = fragen[zufallIndex];
+    if (gestellteFragen < 10 && aktuelleFrageIndex < fragen.length) {
+        let frage = fragen[aktuelleFrageIndex];
         document.getElementById('frageTitel').innerText = frage.titel;
         renderAntworten(frage.antworten);
-        fragen.splice(zufallIndex, 1); // Frage aus dem Array entfernen
         gestellteFragen++;
+        aktuelleFrageIndex++;
     } else {
         document.getElementById('quizFragen').style.display = 'none';
         document.getElementById('ergebnis').style.display = 'block';
         document.getElementById('punkte').innerText = gesamtpunkte;
+
+        let nachricht = document.getElementById('nachricht');
+        if (gesamtpunkte > 8) {
+            nachricht.innerText = "Gut gemacht!";
+        } else if (gesamtpunkte > 5) {
+            nachricht.innerText = "Nicht schlecht!";
+        } else {
+            nachricht.innerText = "Weiter üben!";
+        }
     }
 }
 
 function antwortAusgewaehlt(index) {
-    let aktuelleFrage = fragen[gestellteFragen - 1]; // Letzte Frage holen
+    let aktuelleFrage = fragen[aktuelleFrageIndex - 1]; // Letzte Frage holen
     let antwort = aktuelleFrage.antworten[index];
     if (antwort.istRichtig) {
         gesamtpunkte += 1;
         document.getElementById('feedback').innerText = "Richtig!";
         document.getElementById('feedback').style.color = 'green';
     } else {
-        document.getElementById('feedback').innerText = "Falsch!";
+        let richtigeAntwort = aktuelleFrage.antworten.find(a => a.istRichtig);
+        document.getElementById('feedback').innerText = `Falsch! Die richtige Antwort war: ${richtigeAntwort.text}`;
         document.getElementById('feedback').style.color = 'red';
     }
 
@@ -62,7 +71,8 @@ function antwortAusgewaehlt(index) {
 function neustart() {
     gestellteFragen = 0;
     gesamtpunkte = 0;
-    // Fragenliste erneut laden
+    aktuelleFrageIndex = 0;
+    // Fragenliste erneut laden, ist aber optional. Es wäre ausreichend, den aktuelleFrageIndex zurückzusetzen.
     fetch('questions.json')
     .then(response => response.json())
     .then(data => {
