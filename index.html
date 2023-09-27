@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizspiel</title>
+    <link rel="stylesheet" type="text/css" href="globals.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="startSeite">
+            <h1>Willkommen zum Quiz!</h1>
+            <button onclick="ladeQuizDaten()">Quiz starten</button>
+        </div>
+
+        <div id="quizFragen" style="display: none;">
+            <h2 id="frageTitel"></h2>
+            <div id="antworten">
+                <!-- Antworten werden hier dynamisch eingefügt -->
+            </div>
+            <p id="feedback" style="color: red;"></p>
+        </div>
+
+        <div id="ergebnis" style="display: none;">
+            <h2>Ihre Punktzahl: <span id="punkte"></span></h2>
+            <p id="nachricht"></p>
+            <button onclick="neustart()">Nochmal spielen</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

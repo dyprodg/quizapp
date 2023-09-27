@@ -1,0 +1,11 @@
+[
+    {
+        "titel": "Was ist die Hauptstadt von Deutschland?",
+        "antworten": [
+            {"text": "Berlin", "istRichtig": true},
+            {"text": "München", "istRichtig": false},
+            {"text": "Hamburg", "istRichtig": false},
+            {"text": "Hamburg", "istRichtig": false}
+        ]
+    }
+]
