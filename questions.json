@@ -1,47 +1,47 @@
 [
     {
-        "titel": "Was ist die Hauptstadt von Deutschland?",
+        "titel": "Was ist die Hauptstadt von Frankreich?",
         "antworten": [
-            {"text": "Berlin", "istRichtig": true},
-            {"text": "München", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false}
+            {"text": "Paris", "istRichtig": true},
+            {"text": "Berlin", "istRichtig": false},
+            {"text": "London", "istRichtig": false},
+            {"text": "Rom", "istRichtig": false}
         ]
     },
     {
-        "titel": "Was ist die Hauptstadt von Deutschland?",
+        "titel": "Wie heißt die größte Insel der Welt?",
         "antworten": [
-            {"text": "Berlin", "istRichtig": true},
-            {"text": "München", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false}
+            {"text": "Grönland", "istRichtig": true},
+            {"text": "Australien", "istRichtig": false},
+            {"text": "Madagaskar", "istRichtig": false},
+            {"text": "Neuseeland", "istRichtig": false}
         ]
     },
     {
-        "titel": "Was ist die Hauptstadt von Deutschland?",
+        "titel": "Was ist die Hauptstadt von Japan?",
         "antworten": [
-            {"text": "Berlin", "istRichtig": true},
-            {"text": "München", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false}
+            {"text": "Tokio", "istRichtig": true},
+            {"text": "Peking", "istRichtig": false},
+            {"text": "Seoul", "istRichtig": false},
+            {"text": "Osaka", "istRichtig": false}
         ]
     },
     {
-        "titel": "Was ist die Hauptstadt von Deutschland?",
+        "titel": "Wie viele Planeten gibt es in unserem Sonnensystem?",
         "antworten": [
-            {"text": "Berlin", "istRichtig": true},
-            {"text": "München", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false}
+            {"text": "Acht", "istRichtig": true},
+            {"text": "Sieben", "istRichtig": false},
+            {"text": "Neun", "istRichtig": false},
+            {"text": "Sechs", "istRichtig": false}
         ]
     },
     {
-        "titel": "Was ist die Hauptstadt von Deutschland?",
+        "titel": "Wer schrieb das Buch 'Die Odyssee'?",
         "antworten": [
-            {"text": "Berlin", "istRichtig": true},
-            {"text": "München", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false}
+            {"text": "Homer", "istRichtig": true},
+            {"text": "Plato", "istRichtig": false},
+            {"text": "Aristoteles", "istRichtig": false},
+            {"text": "Sokrates", "istRichtig": false}
         ]
     }
 ]
