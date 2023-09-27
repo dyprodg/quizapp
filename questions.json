@@ -1,47 +1,363 @@
 [
     {
-        "titel": "Was ist die Hauptstadt von Deutschland?",
+        "titel": "Was ist die Hauptstadt von Frankreich?",
         "antworten": [
-            {"text": "Berlin", "istRichtig": true},
-            {"text": "München", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false}
+            {"text": "Berlin", "istRichtig": false},
+            {"text": "Paris", "istRichtig": true},
+            {"text": "Rom", "istRichtig": false},
+            {"text": "Madrid", "istRichtig": false}
         ]
     },
     {
-        "titel": "Was ist die Hauptstadt von Deutschland?",
+        "titel": "Wer schrieb 'Romeo und Julia'?",
         "antworten": [
-            {"text": "Berlin", "istRichtig": true},
-            {"text": "München", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false}
+            {"text": "William Shakespeare", "istRichtig": true},
+            {"text": "Charles Dickens", "istRichtig": false},
+            {"text": "Jane Austen", "istRichtig": false},
+            {"text": "Leo Tolstoi", "istRichtig": false}
         ]
     },
     {
-        "titel": "Was ist die Hauptstadt von Deutschland?",
+        "titel": "Welches Element hat das chemische Symbol 'O'?",
         "antworten": [
-            {"text": "Berlin", "istRichtig": true},
-            {"text": "München", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false}
+            {"text": "Gold", "istRichtig": false},
+            {"text": "Sauerstoff", "istRichtig": true},
+            {"text": "Eisen", "istRichtig": false},
+            {"text": "Kohlenstoff", "istRichtig": false}
         ]
     },
     {
-        "titel": "Was ist die Hauptstadt von Deutschland?",
+        "titel": "In welchem Jahr landeten die ersten Menschen auf dem Mond?",
         "antworten": [
-            {"text": "Berlin", "istRichtig": true},
-            {"text": "München", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false}
+            {"text": "1965", "istRichtig": false},
+            {"text": "1969", "istRichtig": true},
+            {"text": "1972", "istRichtig": false},
+            {"text": "1958", "istRichtig": false}
         ]
     },
     {
-        "titel": "Was ist die Hauptstadt von Deutschland?",
+        "titel": "Wer ist der Verfasser von 'Die göttliche Komödie'?",
         "antworten": [
-            {"text": "Berlin", "istRichtig": true},
-            {"text": "München", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false},
-            {"text": "Hamburg", "istRichtig": false}
+            {"text": "Dante Alighieri", "istRichtig": true},
+            {"text": "Homer", "istRichtig": false},
+            {"text": "Goethe", "istRichtig": false},
+            {"text": "Miguel de Cervantes", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Wie viele Kontinente gibt es auf der Erde?",
+        "antworten": [
+            {"text": "5", "istRichtig": false},
+            {"text": "6", "istRichtig": false},
+            {"text": "7", "istRichtig": true},
+            {"text": "8", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Was ist die chemische Formel für Wasser?",
+        "antworten": [
+            {"text": "CO2", "istRichtig": false},
+            {"text": "H2O", "istRichtig": true},
+            {"text": "O2", "istRichtig": false},
+            {"text": "N2", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Welcher Planet ist der vierte in unserem Sonnensystem?",
+        "antworten": [
+            {"text": "Mars", "istRichtig": true},
+            {"text": "Venus", "istRichtig": false},
+            {"text": "Jupiter", "istRichtig": false},
+            {"text": "Saturn", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Wer malte die Mona Lisa?",
+        "antworten": [
+            {"text": "Vincent van Gogh", "istRichtig": false},
+            {"text": "Leonardo da Vinci", "istRichtig": true},
+            {"text": "Pablo Picasso", "istRichtig": false},
+            {"text": "Michelangelo", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Welches ist das längste Fluss-System der Welt?",
+        "antworten": [
+            {"text": "Nil", "istRichtig": false},
+            {"text": "Amazonas", "istRichtig": true},
+            {"text": "Jangtse", "istRichtig": false},
+            {"text": "Mississippi", "istRichtig": false}
+        ]
+    }
+
+    {
+        "titel": "Was ist die Hauptstadt von Japan?",
+        "antworten": [
+            {"text": "Peking", "istRichtig": false},
+            {"text": "Seoul", "istRichtig": false},
+            {"text": "Tokio", "istRichtig": true},
+            {"text": "Bangkok", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Wer schrieb 'Der Prozess'?",
+        "antworten": [
+            {"text": "Fjodor Dostojewski", "istRichtig": false},
+            {"text": "Hermann Hesse", "istRichtig": false},
+            {"text": "Franz Kafka", "istRichtig": true},
+            {"text": "Thomas Mann", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Was ist die chemische Formel für Kohlendioxid?",
+        "antworten": [
+            {"text": "CO2", "istRichtig": true},
+            {"text": "H2O", "istRichtig": false},
+            {"text": "O2", "istRichtig": false},
+            {"text": "N2", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "In welchem Jahr wurde die Berliner Mauer errichtet?",
+        "antworten": [
+            {"text": "1953", "istRichtig": false},
+            {"text": "1961", "istRichtig": true},
+            {"text": "1975", "istRichtig": false},
+            {"text": "1989", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Welches ist das kleinste Säugetier der Welt?",
+        "antworten": [
+            {"text": "Elefant", "istRichtig": false},
+            {"text": "Maus", "istRichtig": true},
+            {"text": "Fledermaus", "istRichtig": false},
+            {"text": "Hamster", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Wer entdeckte die Relativitätstheorie?",
+        "antworten": [
+            {"text": "Isaac Newton", "istRichtig": false},
+            {"text": "Galileo Galilei", "istRichtig": false},
+            {"text": "Albert Einstein", "istRichtig": true},
+            {"text": "Stephen Hawking", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Welcher Ozean liegt östlich von Afrika?",
+        "antworten": [
+            {"text": "Atlantischer Ozean", "istRichtig": false},
+            {"text": "Indischer Ozean", "istRichtig": true},
+            {"text": "Pazifischer Ozean", "istRichtig": false},
+            {"text": "Arktischer Ozean", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Wer schrieb '1984'?",
+        "antworten": [
+            {"text": "George Orwell", "istRichtig": true},
+            {"text": "Aldous Huxley", "istRichtig": false},
+            {"text": "Ray Bradbury", "istRichtig": false},
+            {"text": "Isaac Asimov", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Welches ist das höchste Gebirge der Welt?",
+        "antworten": [
+            {"text": "Anden", "istRichtig": false},
+            {"text": "Rocky Mountains", "istRichtig": false},
+            {"text": "Himalaya", "istRichtig": true},
+            {"text": "Alpen", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Was ist die Hauptzutat in Guacamole?",
+        "antworten": [
+            {"text": "Tomaten", "istRichtig": false},
+            {"text": "Avocado", "istRichtig": true},
+            {"text": "Zwiebeln", "istRichtig": false},
+            {"text": "Kartoffeln", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Welches ist das größte Säugetier der Welt?",
+        "antworten": [
+            {"text": "Elefant", "istRichtig": false},
+            {"text": "Blauwal", "istRichtig": true},
+            {"text": "Giraffe", "istRichtig": false},
+            {"text": "Nashorn", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "In welchem Jahr endete der Zweite Weltkrieg?",
+        "antworten": [
+            {"text": "1943", "istRichtig": false},
+            {"text": "1945", "istRichtig": true},
+            {"text": "1950", "istRichtig": false},
+            {"text": "1939", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Welche ist die größte Wüste der Welt?",
+        "antworten": [
+            {"text": "Sahara", "istRichtig": false},
+            {"text": "Gobi", "istRichtig": false},
+            {"text": "Antarktis", "istRichtig": true},
+            {"text": "Atacama", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Wer komponierte die 'Ode an die Freude'?",
+        "antworten": [
+            {"text": "Ludwig van Beethoven", "istRichtig": true},
+            {"text": "Wolfgang Amadeus Mozart", "istRichtig": false},
+            {"text": "Johann Sebastian Bach", "istRichtig": false},
+            {"text": "Johannes Brahms", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Welches ist das kleinste Land der Welt?",
+        "antworten": [
+            {"text": "Monaco", "istRichtig": false},
+            {"text": "Vatikanstadt", "istRichtig": true},
+            {"text": "San Marino", "istRichtig": false},
+            {"text": "Nauru", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Was ist die Hauptstadt von Australien?",
+        "antworten": [
+            {"text": "Sydney", "istRichtig": false},
+            {"text": "Canberra", "istRichtig": true},
+            {"text": "Melbourne", "istRichtig": false},
+            {"text": "Brisbane", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Wer schrieb 'Die Abenteuer des Huckleberry Finn'?",
+        "antworten": [
+            {"text": "Mark Twain", "istRichtig": true},
+            {"text": "Jules Verne", "istRichtig": false},
+            {"text": "Charles Dickens", "istRichtig": false},
+            {"text": "Jane Austen", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Welches ist das längste Tier der Welt?",
+        "antworten": [
+            {"text": "Elefant", "istRichtig": false},
+            {"text": "Blauwal", "istRichtig": true},
+            {"text": "Giraffe", "istRichtig": false},
+            {"text": "Python", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Welcher Planet wird als 'der Rote Planet' bezeichnet?",
+        "antworten": [
+            {"text": "Venus", "istRichtig": false},
+            {"text": "Mars", "istRichtig": true},
+            {"text": "Jupiter", "istRichtig": false},
+            {"text": "Saturn", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Was ist die offizielle Landessprache von Brasilien?",
+        "antworten": [
+            {"text": "Spanisch", "istRichtig": false},
+            {"text": "Portugiesisch", "istRichtig": true},
+            {"text": "Französisch", "istRichtig": false},
+            {"text": "Italienisch", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Wer schrieb 'Der kleine Prinz'?",
+        "antworten": [
+            {"text": "Antoine de Saint-Exupéry", "istRichtig": true},
+            {"text": "Hans Christian Andersen", "istRichtig": false},
+            {"text": "Roald Dahl", "istRichtig": false},
+            {"text": "Astrid Lindgren", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Welcher ist der längste Fluss der Welt?",
+        "antworten": [
+            {"text": "Nil", "istRichtig": false},
+            {"text": "Amazonas", "istRichtig": true},
+            {"text": "Jangtse", "istRichtig": false},
+            {"text": "Mississippi", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Was ist die Hauptstadt von Kanada?",
+        "antworten": [
+            {"text": "Toronto", "istRichtig": false},
+            {"text": "Ottawa", "istRichtig": true},
+            {"text": "Vancouver", "istRichtig": false},
+            {"text": "Montreal", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Welches Element hat das chemische Symbol 'Fe'?",
+        "antworten": [
+            {"text": "Eisen", "istRichtig": true},
+            {"text": "Gold", "istRichtig": false},
+            {"text": "Silber", "istRichtig": false},
+            {"text": "Kupfer", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Wer malte 'Die Sternennacht'?",
+        "antworten": [
+            {"text": "Leonardo da Vinci", "istRichtig": false},
+            {"text": "Vincent van Gogh", "istRichtig": true},
+            {"text": "Claude Monet", "istRichtig": false},
+            {"text": "Pablo Picasso", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Welche Planeten sind Gasriesen in unserem Sonnensystem?",
+        "antworten": [
+            {"text": "Mars und Venus", "istRichtig": false},
+            {"text": "Jupiter und Saturn", "istRichtig": true},
+            {"text": "Merkur und Jupiter", "istRichtig": false},
+            {"text": "Uranus und Neptun", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Was ist die Hauptstadt von Südkorea?",
+        "antworten": [
+            {"text": "Peking", "istRichtig": false},
+            {"text": "Seoul", "istRichtig": true},
+            {"text": "Tokio", "istRichtig": false},
+            {"text": "Hanoi", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Wer ist der Verfasser von 'Die Odyssee'?",
+        "antworten": [
+            {"text": "Homer", "istRichtig": true},
+            {"text": "Virgil", "istRichtig": false},
+            {"text": "Herodot", "istRichtig": false},
+            {"text": "Sophokles", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Welches ist das kleinste Primzahl?",
+        "antworten": [
+            {"text": "2", "istRichtig": true},
+            {"text": "3", "istRichtig": false},
+            {"text": "5", "istRichtig": false},
+            {"text": "7", "istRichtig": false}
+        ]
+    },
+    {
+        "titel": "Was ist die Hauptkomponente von Erdgas?",
+        "antworten": [
+            {"text": "Methan", "istRichtig": true},
+            {"text": "Ethanol", "istRichtig": false},
+            {"text": "Propan", "istRichtig": false},
+            {"text": "Butan", "istRichtig": false}
         ]
     }
 ]
