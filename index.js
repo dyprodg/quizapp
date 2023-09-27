@@ -1,83 +1,57 @@
-let gestellteFragen = 0;
-let gesamtpunkte = 0;
-let fragen = [];
-let aktuelleFrageIndex = 0;
+const express = require('express');
+const bodyParser = require('body-parser');
+const { quiz } = require('./questions');
+const app = express();
+const path = require('path');
 
-window.onload = function() {
-    fetch('questions.json')
-    .then(response => response.json())
-    .then(data => {
-        fragen = data;
-    })
-    .catch(error => console.error('Fehler:', error));
-};
+// Body Parser Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
 
-function startQuiz() {
-    document.getElementById('startSeite').style.display = 'none';
-    document.getElementById('quizFragen').style.display = 'block';
-    naechsteFrage();
-}
+// EJS View Engine Setup
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));  // Setzen des 'views'-Pfads
 
-function renderAntworten(antworten) {
-    let antwortenHTML = '';
-    antworten.forEach((antwort, index) => {
-        antwortenHTML += `<button onclick="antwortAusgewaehlt(${index})">${antwort.text}</button>`;
-    });
-    document.getElementById('antworten').innerHTML = antwortenHTML;
-}
+let currentQuestionIndex = 0;
+let score = 0;
 
-function naechsteFrage() {
-    if (gestellteFragen < 10 && aktuelleFrageIndex < fragen.length) {
-        let frage = fragen[aktuelleFrageIndex];
-        document.getElementById('frageTitel').innerText = frage.titel;
-        renderAntworten(frage.antworten);
-        gestellteFragen++;
-        aktuelleFrageIndex++;
+app.get('/', (req, res) => {
+    res.render('index', { quizStarted: false });
+});
+
+app.get('/startQuiz', (req, res) => {
+    currentQuestionIndex = 0;
+    score = 0;
+    res.redirect('/nextQuestion');
+});
+
+app.get('/nextQuestion', (req, res) => {
+    if (currentQuestionIndex < quiz.length) {
+        res.render('index', {
+            quizStarted: true,
+            question: quiz[currentQuestionIndex],
+            score: score
+        });
     } else {
-        document.getElementById('quizFragen').style.display = 'none';
-        document.getElementById('ergebnis').style.display = 'block';
-        document.getElementById('punkte').innerText = gesamtpunkte;
-
-        let nachricht = document.getElementById('nachricht');
-        if (gesamtpunkte > 8) {
-            nachricht.innerText = "Gut gemacht!";
-        } else if (gesamtpunkte > 5) {
-            nachricht.innerText = "Nicht schlecht!";
-        } else {
-            nachricht.innerText = "Weiter üben!";
-        }
+        // Ändern der Ausgabe, wenn das Quiz vorbei ist
+        res.render('quizEnd', {
+            score: score
+        });
     }
-}
+});
 
-function antwortAusgewaehlt(index) {
-    let aktuelleFrage = fragen[aktuelleFrageIndex - 1]; // Letzte Frage holen
-    let antwort = aktuelleFrage.antworten[index];
-    if (antwort.istRichtig) {
-        gesamtpunkte += 1;
-        document.getElementById('feedback').innerText = "Richtig!";
-        document.getElementById('feedback').style.color = 'green';
-    } else {
-        let richtigeAntwort = aktuelleFrage.antworten.find(a => a.istRichtig);
-        document.getElementById('feedback').innerText = `Falsch! Die richtige Antwort war: ${richtigeAntwort.text}`;
-        document.getElementById('feedback').style.color = 'red';
+app.post('/submitAnswer', (req, res) => {
+    const userAnswerIndex = parseInt(req.body.answer);
+    const correctAnswer = quiz[currentQuestionIndex].antworten.find(a => a.istRichtig);
+    
+    if (quiz[currentQuestionIndex].antworten[userAnswerIndex].istRichtig) {
+        score++;
     }
 
-    setTimeout(() => {
-        document.getElementById('feedback').innerText = ""; // Feedback-Text zurücksetzen
-        naechsteFrage();
-    }, 1000);
-}
+    currentQuestionIndex++;
+    res.redirect('/nextQuestion');
+});
 
-function neustart() {
-    gestellteFragen = 0;
-    gesamtpunkte = 0;
-    aktuelleFrageIndex = 0;
-    // Fragenliste erneut laden, ist aber optional. Es wäre ausreichend, den aktuelleFrageIndex zurückzusetzen.
-    fetch('questions.json')
-    .then(response => response.json())
-    .then(data => {
-        fragen = data;
-        startQuiz();
-    })
-    .catch(error => console.error('Fehler:', error));
-}
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`Server läuft auf http://localhost:${PORT}`);
+});
