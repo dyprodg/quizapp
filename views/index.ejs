@@ -20,7 +20,7 @@
             <% question.antworten.forEach((answer, index) => { %>
 
                 <!-- Diese Div zu einem grid machen kleiner tipp grid col col-2 -->
-                <div style="display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: center;">
+                <div class="answer-grid-item" style="display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: center;">
                     <input type="radio" name="answer" value="<%= index %>" required>
                     <label><%= answer.text %></label>
                 </div>
