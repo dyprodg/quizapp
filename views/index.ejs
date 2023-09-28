@@ -11,8 +11,9 @@
 <!-- Mach das zu einer box die in der mitte des bildschirms  flexbox max witdh 800-->
 <div class="center">
     <% if (!quizStarted) { %>
-        <h1>Willkommen beim Quizspiel!</h1>
-        <a href="/startQuiz">Quiz starten</a>
+        <h1>Willkommen beim Dumb Check!</h1>
+        <button class='start' onclick="window.location.href='/startQuiz'">Check starten</button>
+
     <% } else { %>
         <h2><%= question.titel %></h2>
 

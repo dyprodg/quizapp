@@ -18,23 +18,25 @@ h1 {
     margin: 15px;
     padding: 10px;
     font-size: 1.2em;
-    border-radius: 5px; /* Für einen sanften Übergang */
+    border-radius: 5px; 
 }
 
 .answer-grid-item:nth-child(1) {
-    background-color: #FF9999; /* Ein sanftes Rot */
+    display: flex;
+    padding: 10px 10px;
+    background-color: #FF9999; 
 }
 
 .answer-grid-item:nth-child(2) {
-    background-color: #AED8A1; /* Ein sanftes Grün */
+    background-color: #AED8A1; 
 }
 
 .answer-grid-item:nth-child(3) {
-    background-color: #A2C8F2; /* Ein sanftes Blau */
+    background-color: #A2C8F2; 
 }
 
 .answer-grid-item:nth-child(4) {
-    background-color: #FFEB99; /* Ein sanftes Gelb */
+    background-color: #FFEB99;
 }
 
 button {
@@ -78,5 +80,32 @@ button:hover {
 }
 
 .send {
-    
+    background-color:white; 
+    padding: 12px 25px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease; 
+    border-radius: 10px;
+    color: black;
+}
+
+.send:hover {
+    background-color: black; 
+    color: white;
+}
+
+.start {
+    background-color:white; 
+    padding: 12px 25px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease; 
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 10px;
+    color: black;
+}
+
+.start:hover {
+    background-color: black; 
+    color: white;
 }
