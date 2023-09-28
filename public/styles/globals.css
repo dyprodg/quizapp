@@ -3,35 +3,40 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f2f3f5;  /* Ein heller Hintergrund */
 }
 
 h1 {
     text-align: center;
     padding: 20px 0;
     font-size: 2em;
+    color: #4a4a4a; /* Dunklerer Text für Kontrast */
 }
 
 /* Antwortfelder Styling */
-.answer-field {
+.answer-grid-item {
     margin: 15px;
     padding: 10px;
     font-size: 1.2em;
+    border-radius: 5px; 
 }
 
-.answer-field:nth-child(1) {
-    background-color: #E57373; /* Farbton 1 */
+.answer-grid-item:nth-child(1) {
+    display: flex;
+    padding: 10px 10px;
+    background-color: #FF9999; 
 }
 
-.answer-field:nth-child(2) {
-    background-color: #81C784; /* Farbton 2 */
+.answer-grid-item:nth-child(2) {
+    background-color: #AED8A1; 
 }
 
-.answer-field:nth-child(3) {
-    background-color: #64B5F6; /* Farbton 3 */
+.answer-grid-item:nth-child(3) {
+    background-color: #A2C8F2; 
 }
 
-.answer-field:nth-child(4) {
-    background-color: #FFD54F; /* Farbton 4 */
+.answer-grid-item:nth-child(4) {
+    background-color: #FFEB99;
 }
 
 button {
@@ -41,27 +46,66 @@ button {
     font-size: 2em;
     cursor: pointer;
     border: none;
-    background-color: #333;
-    color: #fff;
+    background-color: #7F7F7F;  
+    color: #ffffff; 
     border-radius: 5px;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #5a5a5a; 
 }
 
-.center{
-    max-width: 300px; 
-    height: 400px;
-    width: 100%; 
-    background-color: #cbcbcb;
-    padding: 20px; 
+.center {
+    max-width: 500px; 
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     border-radius: 8px;
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
 }
 
 .quiz-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 20px; /* Abstand zwischen den Elementen */
-    background-color: #333;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background-color: #f9f9f9;  
+    align-items: center; 
+}
+
+.send {
+    background-color:white; 
+    padding: 12px 25px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease; 
+    border-radius: 10px;
+    color: black;
+}
+
+.send:hover {
+    background-color: black; 
+    color: white;
+}
+
+.start {
+    background-color:white; 
+    padding: 12px 25px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease; 
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 10px;
+    color: black;
+}
+
+.start:hover {
+    background-color: black; 
+    color: white;
 }

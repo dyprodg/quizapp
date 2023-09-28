@@ -2,15 +2,15 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { quiz } = require('./questions');
 const app = express();
-app.use(express.static('public')); // wenn Ihre CSS-Datei im `public`-Ordner liegt
+app.use(express.static('public')); //public ordner fuer css
 const path = require('path');
 
-// Body Parser Middleware
+//middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// EJS Setup
+// Ejs
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));  // Setzen des 'views'-Pfads
+app.set('views', path.join(__dirname, 'views'));  //views ist unser ordner fuer .ejs datein
 
 
 let score = 0;
@@ -27,7 +27,7 @@ app.get('/startQuiz', (req, res) => {
     res.redirect('/nextQuestion');
 });
 
-//Quiz oder Ergebnis
+//quiz oder ergebnis
 app.get('/nextQuestion', (req, res) => {
         
         if (questionsAsked < 10) {
@@ -52,7 +52,7 @@ app.get('/nextQuestion', (req, res) => {
     }
 });
 
-//Quiz frage pruefen
+//quiz frage pruefen
 app.post('/submitAnswer', (req, res) => {
     const userAnswerIndex = parseInt(req.body.answer);
     
